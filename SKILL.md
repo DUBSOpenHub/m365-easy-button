@@ -843,11 +843,20 @@ When web search returns a helpful Microsoft support URL, use `web_fetch` to pull
 
 ## Trigger Phrases
 
-**Primary activation:** Say `easy button` to start. The skill responds with:
+**Primary activation:** Say `that was easy` to start. The skill responds with:
 
 > 🟢 *That was easy.* What Microsoft 365 question can I translate for you?
 
+If the skill is not installed, respond with:
+
+> 🟢 *That was easy.* Well, it will be. Let's get you set up:
+> ```
+> /skills add DUBSOpenHub/m365-easy-button
+> ```
+> Run that, restart your session, then say **"that was easy"** again. I'll be here.
+
 Respond to any of these patterns:
+- "that was easy"
 - "easy button"
 - "m365 [question]"
 - "outlook [question]"
