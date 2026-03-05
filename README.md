@@ -6,13 +6,17 @@
 ![Platform: Copilot CLI](https://img.shields.io/badge/platform-Copilot%20CLI-232F3E.svg)
 ![Language: Markdown](https://img.shields.io/badge/written%20in-Markdown-000000.svg)
 
-The M365 Easy Button is a GitHub Copilot CLI skill that helps employees transition from Google Workspace to Microsoft 365. It's not generic tech support. It's a translator between two productivity ecosystems that starts every answer from where you already are: Google.
-
-> ⚡ **One-command install:**
+> ⚡ **Install:**
 > ```
 > /skills add DUBSOpenHub/m365-easy-button
 > ```
-> Then restart your Copilot CLI session. Ask any Microsoft 365 question.
+> **Then just say: `easy button`**
+>
+> 🔴 *That was easy.* What Microsoft 365 question can I translate for you?
+
+---
+
+The M365 Easy Button is a GitHub Copilot CLI skill that helps employees transition from Google Workspace to Microsoft 365. It's not generic tech support. It's a translator between two productivity ecosystems that starts every answer from where you already are: Google.
 
 ## What It Does
 
@@ -91,11 +95,12 @@ The skill acts as the coworker who already made the transition and is happy to s
 
 ## How It Was Built
 
-This skill was built through a [Havoc Hackathon](https://github.com/DUBSOpenHub/awesome-copilot) — 14 AI models competed simultaneously to produce the best version. The top 6 entries were judged across completeness, depth, usability, persona fidelity, and innovation. The final output synthesizes the winning elements:
+The original spec was written by [@DUBSOpenHub](https://github.com/DUBSOpenHub) — the core architecture, persona, answer format (Bridge → Steps → Next Step → Gotcha), the complete App Router table, all behavior mapping tables (Email, Calendar, Files, Chat, Documents), the troubleshooting diagnostic flow, web search integration, and scope boundaries. That spec was then fed into a [Havoc Hackathon](https://github.com/DUBSOpenHub/awesome-copilot) where 14 AI models competed simultaneously to expand and improve it. The top 6 entries were judged across completeness, depth, usability, persona fidelity, and innovation. The final output synthesizes the winning additions on top of the original:
 
-| Contribution | Source Model |
+| Contribution | Source |
 |---|---|
-| Base structure, AI comparison, troubleshooting, workflows | Claude Sonnet 4.6 |
+| Original spec: persona, answer format, app router, behavior mappings, troubleshooting, scope | **@DUBSOpenHub** |
+| Expanded structure, AI comparison, additional workflows | Claude Sonnet 4.6 |
 | Emotional Calibration, Voice Do/Don't table | Claude Opus 4.5 |
 | Mental Model Translations (why M365 feels different) | GPT-5.2 |
 | "If This Fails" fallback section | GPT-5.3 Codex |
