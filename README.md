@@ -1,14 +1,12 @@
 # 🟢 M365 Easy Button
 
 ```diff
-+  ╔═════════════════════════════════════════════════════╗
-+  ║                                                     ║
-+  ║             T H A T   W A S   E A S Y !             ║
-+  ║                                                     ║
-+  ║       Google Workspace  →  Microsoft 365            ║
-+  ║            Your translator is ready.                ║
-+  ║                                                     ║
-+  ╚═════════════════════════════════════════════════════╝
++
++             T H A T   W A S   E A S Y !
++
++        Google Workspace  →  Microsoft 365
++             Your translator is ready.
++
 ```
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
