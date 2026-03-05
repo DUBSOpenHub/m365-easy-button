@@ -843,7 +843,12 @@ When web search returns a helpful Microsoft support URL, use `web_fetch` to pull
 
 ## Trigger Phrases
 
+**Primary activation:** Say `easy button` to start. The skill responds with:
+
+> 🔴 *That was easy.* What Microsoft 365 question can I translate for you?
+
 Respond to any of these patterns:
+- "easy button"
 - "m365 [question]"
 - "outlook [question]"
 - "teams [question]"
