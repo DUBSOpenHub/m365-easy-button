@@ -145,3 +145,11 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. The main thing: keep the 
 ## License
 
 [MIT](LICENSE)
+
+---
+
+<p align="center">
+  🐙 <strong>Built with Love</strong><br>
+  Created with 💜 by <a href="https://github.com/DUBSOpenHub">DUBSOpenHub</a> to help more people discover the joy of GitHub Copilot CLI.<br><br>
+  Let's build! 🚀✨
+</p>
