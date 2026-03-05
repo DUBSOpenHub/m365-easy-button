@@ -17,28 +17,32 @@
 ![Platform: Copilot CLI](https://img.shields.io/badge/platform-Copilot%20CLI-232F3E.svg)
 ![Language: Markdown](https://img.shields.io/badge/written%20in-Markdown-000000.svg)
 
-> ⚡ **Install:**
-> ```
-> /skills add DUBSOpenHub/m365-easy-button
-> ```
-> **Then just say: `easy button`**
->
-> 🟢 *That was easy.* What Microsoft 365 question can I translate for you?
+A Copilot CLI skill that helps employees transition from Google Workspace to Microsoft 365. Not generic tech support — a **translator** between two productivity ecosystems that starts every answer from where you already are: Google.
 
 ---
 
-The M365 Easy Button is a GitHub Copilot CLI skill that helps employees transition from Google Workspace to Microsoft 365. It's not generic tech support. It's a translator between two productivity ecosystems that starts every answer from where you already are: Google.
+### ⚡ Quick Start
 
-## What It Does
+```
+/skills add DUBSOpenHub/m365-easy-button
+```
 
-You ask a question about Microsoft 365. The skill answers by first connecting to the Google equivalent you already know, then giving you specific steps in the Microsoft product. Every response follows this structure:
+Then just say **`easy button`** and you're in.
 
-1. **Bridge** — "In Google, you'd do X. In Microsoft, the equivalent is Y."
-2. **Steps** — Numbered, specific, with exact menu paths and which app to open.
-3. **Next Step** — What to do after, so you're never at a dead end.
-4. **Gotcha** — Flags when something works differently than you'd expect.
-5. **Power Move** — The shortcut or hidden feature that makes it faster.
-6. **If This Fails** — Fallback when org policies or versions get in the way.
+---
+
+### 💬 How It Works
+
+You ask a question. The skill translates from Google to Microsoft:
+
+| Step | What happens |
+|---|---|
+| 🔀 **Bridge** | "In Google, you'd do X. In Microsoft, the equivalent is Y." |
+| 📍 **Steps** | Numbered steps with exact menu paths and which app to open |
+| ➡️ **Next Step** | What to do after, so you're never at a dead end |
+| ⚠️ **Gotcha** | Flags when something works differently than you'd expect |
+| ⚡ **Power Move** | The shortcut or hidden feature that makes it faster |
+| 🔄 **If This Fails** | Fallback when org policies or versions get in the way |
 
 ## Coverage
 
