@@ -1,4 +1,4 @@
-# Contributing to 🔴 M365 Easy Button
+# Contributing to 🟢 M365 Easy Button
 
 Thanks for helping make the Google-to-Microsoft transition smoother for everyone.
 
