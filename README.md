@@ -12,7 +12,7 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 [![Security Policy](https://img.shields.io/badge/Security-Policy-brightgreen?logo=github)](SECURITY.md)
-![Version: v1.1.0](https://img.shields.io/badge/version-v1.1.0-5E5E5E.svg)
+![Version: v2.0.0](https://img.shields.io/badge/version-v2.0.0-5E5E5E.svg)
 ![Platform: Copilot CLI](https://img.shields.io/badge/platform-Copilot%20CLI-232F3E.svg)
 ![Language: Markdown](https://img.shields.io/badge/written%20in-Markdown-000000.svg)
 
