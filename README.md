@@ -1,5 +1,13 @@
 # 🟢 M365 Easy Button
 
+> ⚡ **Get started fast!** Install it with either the shell command or the in-CLI command:
+> ```
+> copilot plugin install DUBSOpenHub/m365-easy-button
+> # or inside Copilot CLI:
+> /plugin install DUBSOpenHub/m365-easy-button
+> ```
+> Then say **`easy button`** and you're in.
+
 > **That was easy!** — Google Workspace → Microsoft 365. Your translator is ready.
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
@@ -10,17 +18,9 @@
 
 A Copilot CLI skill that translates Google Workspace muscle memory into Microsoft 365 fluency. Not generic tech support — a **translator** between two productivity ecosystems.
 
-![M365 Easy Button Coverage Map](skills/m365-easy-button/coverage-chart.png)
-
 We know this transition can be tough. This GitHub Copilot skill is going to make it easy! Every time you have a question, come back and we'll help you navigate it.
 
-> ⚡ **Get started fast!** Install it with either the shell command or the in-CLI command:
-> ```
-> copilot plugin install DUBSOpenHub/m365-easy-button
-> # or inside Copilot CLI:
-> /plugin install DUBSOpenHub/m365-easy-button
-> ```
-> Then say **`easy button`** and you're in.
+![M365 Easy Button Coverage Map](skills/m365-easy-button/coverage-chart.png)
 
 ## Contents
 
