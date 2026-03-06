@@ -8,113 +8,145 @@
 ![Platform: Copilot CLI](https://img.shields.io/badge/platform-Copilot%20CLI-232F3E.svg)
 ![Language: Markdown](https://img.shields.io/badge/written%20in-Markdown-000000.svg)
 
-A Copilot CLI skill that helps employees transition from Google Workspace to Microsoft 365. Not generic tech support — a **translator** between two productivity ecosystems that starts every answer from where you already are: Google.
+A Copilot CLI skill that translates Google Workspace muscle memory into Microsoft 365 fluency. Not generic tech support — a **translator** between two productivity ecosystems.
 
----
+> ⚡ **Get started fast!** Copy this right into the [Copilot CLI](https://github.com/github/copilot-cli):
+> ```
+> /skills add DUBSOpenHub/m365-easy-button
+> ```
+> Then say **`easy button`** and you're in.
 
-### ⚡ Quick Start
+## Contents
 
-```
-/skills add DUBSOpenHub/m365-easy-button
-```
+1. [The Problem](#the-problem)
+2. [How It Works](#how-it-works)
+3. [What's Covered](#whats-covered)
+4. [The Experience](#the-experience)
+5. [How It Was Built](#how-it-was-built)
+6. [Activation](#activation)
+7. [Contributing](#contributing)
+8. [License](#license)
 
-Then just say **`easy button`** and you're in.
+## The Problem
 
----
+You're fast in Google. You know where everything is, what keyboard shortcuts do what, and how to get things done without thinking. Then your company switches to Microsoft 365, and suddenly you're slow again.
 
-### 💬 How It Works
-
-You ask a question. The skill translates from Google to Microsoft:
-
-| Step | What happens |
+| Without Easy Button | With Easy Button |
 |---|---|
-| 🔀 **Bridge** | "In Google, you'd do X. In Microsoft, the equivalent is Y." |
-| 📍 **Steps** | Numbered steps with exact menu paths and which app to open |
-| ➡️ **Next Step** | What to do after, so you're never at a dead end |
-| ⚠️ **Gotcha** | Flags when something works differently than you'd expect |
-| ⚡ **Power Move** | The shortcut or hidden feature that makes it faster |
-| 🔄 **If This Fails** | Fallback when org policies or versions get in the way |
+| "Where is the calendar?" | "Calendar is inside Outlook, not a separate app" |
+| Google search → outdated blog post → wrong menu path | Bridge from Google → exact steps → done |
+| 20 minutes of clicking around | 30 seconds of guided translation |
+| "I hate Teams" | "Oh, that's just Spaces but with tabs" |
 
-## Coverage
+## How It Works
 
-### Product Translations (30+ mappings)
+Every answer follows this flow:
 
-| Google | Microsoft |
-|---|---|
-| Gmail | Outlook |
-| Google Chat / Meet | Teams |
-| Google Calendar | Outlook Calendar |
-| Docs / Sheets / Slides | Word / Excel / PowerPoint |
-| Google Drive | OneDrive + SharePoint |
-| Apps Script | Power Automate + Office Scripts |
-| Looker Studio | Power BI |
-| Google Forms | Microsoft Forms |
-| Google Tasks / Keep | To Do / OneNote |
-| Google Sites | SharePoint |
-| Google Admin | M365 Admin Center |
-| ...and 20+ more | |
-
-### What's Inside (854 lines)
-
-- **Complete App Router** — "I want to do X" → "Open this app"
-- **Mental Model Translations** — Why Microsoft *feels* different (ownership, Teams structure, policy-driven sharing, web vs desktop split)
-- **Detailed Behavior Mappings** — Feature-by-feature tables for Email, Calendar, Files, Chat, Docs, Automation, BI, Tasks, Admin
-- **Keyboard Shortcuts** — Side-by-side tables: Gmail↔Outlook, Meet↔Teams, Docs↔Word, Sheets↔Excel
-- **9 Workflow Translations** — Task-by-task: standup with notes, doc review, form collection, external sharing, onboarding, project tracker, video recording, knowledge base, Apps Script migration
-- **First Week Survival Guide** — 10 things to set up on day one
-- **Power User Tips** — Quick Steps, Search Folders, Power Automate flows, Teams slash commands, Loop components
-- **AI Comparison** — Google Workspace AI vs M365 Copilot features, licensing, and getting started
-- **13 Troubleshooting Patterns** — Real-world problems with step-by-step fixes
-- **Web Search Integration** — Fetches current Microsoft docs when answers need up-to-date info
-
-## Activation
-
-The skill responds to any of these patterns:
-
-- `m365 [question]`
-- `outlook [question]`
-- `teams [question]`
-- Any mention of Microsoft 365, Outlook, Teams, Word, Excel, PowerPoint, OneDrive, or SharePoint
-- `how do I [task] in Microsoft...`
-- `what's the Microsoft version of [Google thing]?`
-- `I used to [do X] in Google, how do I...`
-
-## Manual Install
-
-If you prefer clipboard install:
-
-```bash
-mkdir -p ~/.copilot/skills/m365-easy-button && pbpaste > ~/.copilot/skills/m365-easy-button/SKILL.md
+```
+  You ask a question
+        │
+        ▼
+  🔀 Bridge ─── "In Google, you'd do X..."
+        │
+        ▼
+  📍 Steps ──── Numbered, specific, with menu paths
+        │
+        ▼
+  ➡️ Next ───── What to do after (never a dead end)
+        │
+        ▼
+  ⚠️ Gotcha ─── "Heads up: this works differently..."
+        │
+        ▼
+  ⚡ Power ──── The shortcut that makes it faster
 ```
 
-Copy the contents of [SKILL.md](SKILL.md) to your clipboard first, then run the command above.
+## What's Covered
 
-## Persona
+### 🗺️ Product Translations (30+)
 
-The skill acts as the coworker who already made the transition and is happy to show you around. Patient, zero judgment, never condescending. It never says "it's easy" or "just do X." When Microsoft is genuinely more complicated, it says so and shows the fastest path.
+| Google | → | Microsoft |
+|---|---|---|
+| Gmail | → | Outlook |
+| Google Chat / Meet | → | Teams |
+| Google Calendar | → | Outlook Calendar |
+| Docs / Sheets / Slides | → | Word / Excel / PowerPoint |
+| Google Drive | → | OneDrive + SharePoint |
+| Apps Script | → | Power Automate + Office Scripts |
+| Looker Studio | → | Power BI |
+| Google Forms | → | Microsoft Forms |
+| Google Tasks / Keep | → | To Do / OneNote |
+| Google Sites | → | SharePoint |
+| Google Admin | → | M365 Admin Center |
+| ...and 20+ more | | |
 
-## Scope
+### 📦 What's Inside (860+ lines)
 
-**In scope:** Day-to-day M365 apps (Outlook, Teams, Word, Excel, PowerPoint, OneDrive, SharePoint, Forms, Power Automate, Power BI, To Do, OneNote, Whiteboard, Planner, Stream, Bookings)
+| Section | What you get |
+|---|---|
+| 🗺️ App Router | "I want to do X" → "Open this app" |
+| 🧠 Mental Models | Why Microsoft *feels* different — not just what's different |
+| 🔄 Behavior Mappings | Feature-by-feature tables for 9 product areas |
+| ⌨️ Keyboard Shortcuts | Side-by-side: Gmail↔Outlook, Meet↔Teams, Docs↔Word, Sheets↔Excel |
+| 🔧 9 Workflows | Task-by-task: standup, doc review, external sharing, onboarding... |
+| 📅 First Week Guide | 10 things to set up on day one |
+| 💪 Power User Tips | Quick Steps, Search Folders, Power Automate, Loop components |
+| 🤖 AI Comparison | Google Workspace AI vs M365 Copilot — features, licensing, getting started |
+| 🔍 13 Troubleshooting | Real-world "it's not working" patterns with step-by-step fixes |
 
-**Out of scope:** Azure, Intune, Entra ID, and enterprise admin infrastructure. The skill refers users to IT for those.
+## The Experience
+
+The skill doesn't just answer questions — it makes the transition feel less lonely:
+
+| Moment | What happens |
+|---|---|
+| 🟢 You say `easy button` | Welcome banner + ready to translate |
+| 🏅 First question answered | Achievement: *First Translation!* |
+| 📊 After a few questions | Migration confidence meter shows your progress |
+| 💡 Every 3rd response | A "Did You Know?" power tip you didn't ask for |
+| 😤 You're frustrated | Empathy first, then the fix in 30 seconds |
+| 👋 You say thanks | Sign-off with a tip of the day |
 
 ## How It Was Built
 
-The original spec was written by [@DUBSOpenHub](https://github.com/DUBSOpenHub) — the core architecture, persona, answer format (Bridge → Steps → Next Step → Gotcha), the complete App Router table, all behavior mapping tables (Email, Calendar, Files, Chat, Documents), the troubleshooting diagnostic flow, web search integration, and scope boundaries. That spec was then fed into a [Havoc Hackathon](https://github.com/DUBSOpenHub/awesome-copilot) where 14 AI models competed simultaneously to expand and improve it. The top 6 entries were judged across completeness, depth, usability, persona fidelity, and innovation. The final output synthesizes the winning additions on top of the original:
+Original spec by [@DUBSOpenHub](https://github.com/DUBSOpenHub). Then fed into a [Havoc Hackathon](https://github.com/DUBSOpenHub/awesome-copilot) — 14 AI models competing simultaneously to improve it:
+
+```
+  14 models dispatched across 2 heats
+        │
+        ▼
+  12 entries scored (2 timed out at 40+ min 😅)
+        │
+        ▼
+  Top 6 advanced to finals
+        │
+        ▼
+  Best DNA synthesized into one skill
+```
 
 | Contribution | Source |
 |---|---|
-| Original spec: persona, answer format, app router, behavior mappings, troubleshooting, scope | **@DUBSOpenHub** |
-| Expanded structure, AI comparison, additional workflows | Claude Sonnet 4.6 |
+| Original spec: persona, answer format, app router, behavior mappings, troubleshooting | **@DUBSOpenHub** |
+| Expanded structure, AI comparison, workflows | Claude Sonnet 4.6 |
 | Emotional Calibration, Voice Do/Don't table | Claude Opus 4.5 |
-| Mental Model Translations (why M365 feels different) | GPT-5.2 |
+| Mental Model Translations | GPT-5.2 |
 | "If This Fails" fallback section | GPT-5.3 Codex |
 | Structured hierarchy, tone examples | GPT-5.1 |
 
+## Activation
+
+```
+easy button          → Full welcome + ready to go
+m365 [question]      → Direct question
+outlook [question]   → Email/calendar help
+teams [question]     → Chat/meetings help
+```
+
+Or just ask anything mentioning Microsoft 365, Outlook, Teams, Word, Excel, PowerPoint, OneDrive, or SharePoint.
+
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. The main thing: keep the translator persona consistent and never editorialize about Google vs Microsoft.
+See [CONTRIBUTING.md](CONTRIBUTING.md). The main rule: keep the translator persona consistent. Never editorialize about Google vs Microsoft.
 
 ## License
 
