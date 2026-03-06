@@ -154,8 +154,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). The main rule: keep the translator perso
 
 ---
 
-<p align="center">
-  🐙 <strong>Built with Love</strong><br>
-  Created with 💜 by <a href="https://github.com/DUBSOpenHub">DUBSOpenHub</a> to help more people discover the joy of GitHub Copilot CLI.<br><br>
-  Let's build! 🚀✨
-</p>
+## 🐙 Built with Love
+
+🐙 Built with Love
+
+**Let's build!** 🚀✨
