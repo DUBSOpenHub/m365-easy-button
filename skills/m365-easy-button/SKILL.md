@@ -312,6 +312,146 @@ Outlook, Word, Excel, and PowerPoint features vary more by client (web vs. deskt
 
 ---
 
+### SharePoint: Google Sites → SharePoint Sites
+
+| Google Sites concept | SharePoint equivalent | Key difference |
+|---|---|---|
+| Google Sites (simple drag-drop site) | SharePoint Communication Site | Communication Sites are polished, one-to-many pages (announcements, newsletters, landing pages). Create at sharepoint.com → Create site → Communication site. |
+| Team collaboration site | SharePoint Team Site | Every Microsoft 365 Group (and every Team in Teams) auto-creates a Team Site. You already have one — check your Team's SharePoint tab. |
+| Embed a Google Doc on a page | Web Part: File Viewer / Document Library | Edit page → + → File Viewer web part → pick a Word/Excel/PDF. It renders live on the page. |
+| Embed a Google Sheet/Chart | Web Part: Excel / Power BI | Embed web part → paste the Excel sharing URL. For dashboards, use the Power BI web part. |
+| Embed a YouTube video | Web Part: Stream or Embed | Stream web part for internal video. Embed web part for YouTube/Vimeo URLs. |
+| Simple internal wiki | SharePoint Pages + News | Create pages for each topic. Use the Navigation pane to build a wiki-style sidebar. No separate wiki product needed. |
+| Custom domain for a site | SharePoint doesn't support custom domains natively | Sites live under yourtenant.sharepoint.com. For a custom URL, IT would use a redirect or Azure Front Door. |
+| Public-facing site | SharePoint is internal-only by default | Google Sites can be public. SharePoint sites are internal (authenticated) unless IT enables external sharing or anonymous access. For public sites, most orgs use a separate CMS. |
+| Page analytics | SharePoint Site Analytics | Site Settings → Site usage. Shows unique viewers, page views, popular pages, and traffic sources. Built in, no setup needed. |
+| Forms on a page | Web Part: Microsoft Forms | Edit page → + → Microsoft Forms web part → create or embed an existing form. Responses flow to Forms and optionally to Excel. |
+
+**SharePoint building blocks to know:**
+
+- **Pages** — Individual content pages. Rich text, images, web parts. The unit of content.
+- **News Posts** — Pages promoted as news. Appear in the News web part, Teams Activity feed, and SharePoint start page. Use for announcements.
+- **Document Libraries** — Where files live. Think Google Drive folders but with metadata columns, views, and version history. Every Team channel's Files tab is a document library.
+- **Lists** — Structured data (like a lightweight database or spreadsheet). Track issues, inventory, contacts, events. Add columns, filters, conditional formatting. Comparable to Airtable or Google Sheets used as a tracker.
+- **Web Parts** — Building blocks you drop onto pages: text, images, file viewers, calendars, Planner boards, Power BI reports, embedded forms, people directories. 50+ available out of the box.
+- **Hub Sites** — Group related sites together under one navigation and search scope. Think of it as a parent site that connects department or project sites.
+
+**Quick start for a team intranet:**
+1. Go to sharepoint.com → **Create site** → **Communication site**
+2. Pick a template (Topic, Showcase, or Blank)
+3. Add a **Hero web part** (large banner with links to key resources)
+4. Add a **News web part** (shows latest news posts from this site)
+5. Add a **Document Library web part** (quick access to shared files)
+6. Add a **People web part** (team directory with photos and contact cards)
+7. Publish → share the URL with your team or pin it as a tab in Teams
+
+---
+
+### Security, Compliance & Data Protection: Google Workspace → Microsoft Purview + Defender
+
+| Google Workspace concept | Microsoft equivalent | Where to find it |
+|---|---|---|
+| Google Vault (eDiscovery & holds) | Microsoft Purview eDiscovery | compliance.microsoft.com → eDiscovery |
+| Data retention rules | Purview Retention Policies | compliance.microsoft.com → Data lifecycle management → Retention policies |
+| DLP rules (Data Loss Prevention) | Purview DLP | compliance.microsoft.com → Data loss prevention → Policies |
+| Google Workspace security center | Microsoft Defender for Office 365 | security.microsoft.com |
+| Security alerts & investigations | Defender Incidents & Alerts | security.microsoft.com → Incidents |
+| Phishing/spam filtering | Exchange Online Protection (EOP) + Defender | Included by default. Advanced features in Defender for Office 365 Plan 1/2. |
+| Confidential mode (Gmail) | Sensitivity Labels | compliance.microsoft.com → Information protection → Labels |
+| Content compliance rules | Communication Compliance | compliance.microsoft.com → Communication compliance |
+| Google Audit log | Unified Audit Log | compliance.microsoft.com → Audit → Search |
+| Admin alerts | Alert Policies | compliance.microsoft.com → Alert policies |
+| Context-aware access | Conditional Access (Entra ID) | entra.microsoft.com → Protection → Conditional Access |
+| Third-party app access control | Entra ID Enterprise Applications | entra.microsoft.com → Applications → Enterprise applications |
+
+**What everyday users should know (not just admins):**
+
+- **Sensitivity Labels** — If your org has them enabled, you'll see a label picker (e.g., Public, Internal, Confidential, Highly Confidential) when creating documents or emails. Pick the right one. It controls who can access, forward, copy, or print. Think of it as a classification stamp. In Google, Confidential Mode was optional and email-only; Sensitivity Labels apply to files, emails, Teams messages, and meetings.
+- **DLP pop-ups** — If you try to share a file containing credit card numbers, SSNs, or other sensitive data externally, you may see a DLP policy tip: "This message contains sensitive information." This is your org protecting you, not blocking you. Follow the guidance or request an override if legitimate.
+- **Safe Links & Safe Attachments** — Microsoft Defender scans links and attachments in real time. If a link turns purple and redirects through a Microsoft URL, that's Safe Links working. If an attachment takes a few seconds to arrive, that's Safe Attachments scanning it. Not a bug.
+- **Message Encryption** — Outlook → New Email → Options → Encrypt. Recipients outside your org get a link to view the encrypted message in a secure portal. More reliable than Gmail Confidential Mode for cross-org encryption.
+- **Information Barriers** — Some orgs restrict communication between departments (e.g., investment banking and retail banking). If you can't find someone in Teams or can't share a file with them, this might be an Information Barrier, not a permissions issue. Check with IT.
+
+---
+
+### Power Apps: Google AppSheet → Microsoft Power Apps
+
+| Google AppSheet concept | Power Apps equivalent | Key difference |
+|---|---|---|
+| AppSheet app from a Sheet | Canvas App from Excel/SharePoint list | Power Apps → Create → Start with data → pick your Excel table or SharePoint list. Generates a working app in minutes. |
+| Form-based data entry | Canvas App or Model-driven App | Canvas = pixel-perfect custom layout (like AppSheet). Model-driven = auto-generated UI from a data model (Dataverse). |
+| Data source: Google Sheets | Data source: SharePoint List, Excel, Dataverse | SharePoint Lists are the most common. Dataverse for enterprise-grade data (relational, role-based security, 1M+ rows). |
+| Workflow automation in AppSheet | Power Automate (separate but integrated) | AppSheet bakes automation in. Power Apps calls Power Automate flows for automation. More modular, slightly more setup. |
+| Deploy to mobile | Power Apps mobile app (iOS/Android) | Install "Power Apps" from app store → all your apps appear automatically. No publishing to app stores needed. |
+| AppSheet templates | Power Apps Templates gallery | power apps.microsoft.com → Create → Start from template. Dozens of ready-made apps. |
+| Bot integration | Power Virtual Agents (now Copilot Studio) | Build chatbots that connect to your Power Apps data. No code. |
+| Usage analytics | Power Apps Analytics | maker.powerapps.com → Analytics. Shows active users, sessions, errors by app. |
+
+**When to use Power Apps vs. other tools:**
+
+| Scenario | Best tool | Why |
+|---|---|---|
+| Simple data tracker (< 500 rows) | SharePoint List | No app needed. Lists have views, filters, conditional formatting built in. |
+| Data entry form for field workers | Power Apps Canvas App | Mobile-optimized, offline capable, camera/GPS/barcode scanner built in. |
+| Approval workflow | Power Automate (no app needed) | Approvals connector handles routing, notifications, and tracking natively. |
+| Internal tool with complex logic | Power Apps + Dataverse | Dataverse gives you relational data, business rules, role-based security. |
+| Customer-facing portal | Power Pages (formerly Power Apps Portals) | Authenticated external-facing website connected to Dataverse. |
+| Quick prototype / proof of concept | Power Apps → Create → Describe your app | Copilot in Power Apps generates an app from a plain-English description. Iterate from there. |
+
+**Quick start:**
+1. Go to make.powerapps.com → **Create** → **Start with data**
+2. Pick a SharePoint list or Excel table as your data source
+3. Power Apps generates a three-screen app (browse, detail, edit) automatically
+4. Customize: drag controls, add buttons, change colors, add logic
+5. **Save** → **Publish** → **Share** with your team
+6. They open it in the **Power Apps** mobile app or browser
+
+> Gotcha: Power Apps requires a license. Most M365 Business/Enterprise plans include "Power Apps for M365" which covers apps using standard connectors (SharePoint, Excel, Outlook). Premium connectors (Dataverse, SQL, HTTP) require a standalone Power Apps license (~$20/user/month). Ask IT what's included in your plan.
+
+---
+
+### Licensing: Which M365 Plan Includes What?
+
+Understanding licensing prevents the #1 frustration: "Why can't I see this feature?" Here's what matters for everyday users.
+
+**Core plans most organizations use:**
+
+| Plan | What's included | What's NOT included |
+|---|---|---|
+| **Microsoft 365 Business Basic** | Web-only Office apps (Word, Excel, PPT in browser), Teams, OneDrive (1TB), SharePoint, Exchange email | No desktop Office apps. No Copilot. No Power BI Pro. |
+| **Microsoft 365 Business Standard** | Everything in Basic + desktop Office apps (Word, Excel, PPT, Outlook installed) + Bookings, Clipchamp | No Copilot. No advanced compliance. No Power BI Pro. |
+| **Microsoft 365 Business Premium** | Everything in Standard + Intune device management, Defender for Office 365, Azure Information Protection | No Copilot. No Power BI Pro. |
+| **Microsoft 365 E3** | Full enterprise suite: desktop apps, advanced compliance (Purview basics), eDiscovery, DLP, Intune | No Copilot. No Power BI Pro. No advanced Purview. |
+| **Microsoft 365 E5** | Everything in E3 + Defender for Endpoint, advanced eDiscovery, auto-classification, Power BI Pro, Audio Conferencing | No Copilot (separate add-on). |
+| **Microsoft 365 F1/F3** (Frontline) | Limited apps for frontline workers: Teams, basic Office web, SharePoint read-only (F1) or limited edit (F3) | No desktop apps (F1). Limited OneDrive. |
+
+**Common add-ons (sold separately):**
+
+| Add-on | What it unlocks | Approximate cost |
+|---|---|---|
+| **Microsoft 365 Copilot** | AI assistant in Word, Excel, PPT, Outlook, Teams, and cross-app M365 Chat | ~$30/user/month |
+| **Power BI Pro** | Share Power BI reports and dashboards with other Pro users | ~$10/user/month (included in E5) |
+| **Power Apps Premium** | Premium connectors (Dataverse, SQL, HTTP, custom connectors) | ~$20/user/month |
+| **Power Automate Premium** | Premium connectors + attended/unattended RPA (desktop flows) | ~$15/user/month |
+| **Visio Plan 2** | Full Visio diagramming (web + desktop) | ~$15/user/month |
+| **Project Plan 3/5** | Advanced project management with Gantt, resource management, portfolio tracking | ~$30-55/user/month |
+| **Copilot Studio** | Build custom AI chatbots for your organization | ~$200/month (tenant-level, usage-based) |
+| **Teams Premium** | Meeting recap AI, custom branding, advanced webinars, watermarking | ~$10/user/month |
+
+**How to check what you have:**
+1. Go to **myaccount.microsoft.com** → **Subscriptions**
+2. Or: any Office app → **File → Account** → look under "Product Information"
+3. If a feature is missing, check here first. 90% of "where is this button?" questions are license issues.
+
+**The Google comparison:**
+- Google Workspace plans (Starter, Standard, Plus, Enterprise) bundle everything more uniformly. You rarely hit a "this feature requires a different license" wall.
+- M365 is more modular: the base plan is cheaper, but add-ons stack up. The upside is you only pay for what you use. The downside is complexity.
+- If someone says "I had this in Google" and they can't find it in M365, check the license first, then the feature.
+
+> Quick rule of thumb: If you have desktop Office apps installed and can use Teams, you're on Business Standard, E3, or E5. If you're web-only, you're on Business Basic. If Copilot icons appear in your apps, you have the Copilot add-on.
+
+---
+
 ## Keyboard Shortcuts: Side-by-Side
 
 ### Gmail vs Outlook
