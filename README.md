@@ -36,7 +36,7 @@ You're fast in Google. You know where everything is, what keyboard shortcuts do 
 | "Where is the calendar?" | "Calendar is inside Outlook, not a separate app" |
 | Google search → outdated blog post → wrong menu path | Bridge from Google → exact steps → done |
 | 20 minutes of clicking around | 30 seconds of guided translation |
-| "I hate Teams" | "Oh, that's just Spaces but with tabs" |
+| "I'm struggling in Teams" | "Oh, that's just Spaces but with tabs" |
 
 ## How It Works
 
