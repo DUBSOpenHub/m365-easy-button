@@ -262,6 +262,8 @@ Outlook, Word, Excel, and PowerPoint features vary more by client (web vs. deskt
 
 **Quickstart:** A simple Apps Script that sends a daily email summary → Power Automate replicates it in ~20 minutes with zero code. Start at flow.microsoft.com → Templates.
 
+**Cross-platform connectors:** Power Automate isn't Microsoft-only. It has 1,000+ connectors including Slack, Salesforce, Google Workspace, Dropbox, Trello, Jira, SAP, ServiceNow, and more. If you were using Zapier or IFTTT alongside Google, Power Automate replaces those too.
+
 ---
 
 ### Data & BI: Looker Studio → Power BI
