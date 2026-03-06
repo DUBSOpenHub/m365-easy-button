@@ -22,19 +22,21 @@ Thanks for helping make the Google-to-Microsoft transition smoother for everyone
 ## How to Contribute
 
 1. Fork the repo and create a branch: `update/<topic>`
-2. Edit `SKILL.md` directly — it's the entire skill
+2. Edit `skills/m365-easy-button/SKILL.md` directly — it's the runtime skill
 3. Follow the existing format (tables, Bridge→Steps→Gotcha structure)
 4. Open a PR with a clear description of what you added or changed
 
 ## Testing Your Changes
 
-Install your modified SKILL.md locally:
+Install your modified plugin locally:
 
 ```bash
-cp SKILL.md ~/.copilot/skills/m365-easy-button/SKILL.md
+copilot plugin install .
 ```
 
-Restart your Copilot CLI session and test with queries like:
+If you already have a personal copy at `~/.copilot/skills/m365-easy-button`, temporarily move it out of the way before testing so the plugin version is actually used.
+
+Restart your Copilot CLI session if needed and test with queries like:
 - "How do I share a file externally in OneDrive?"
 - "What's the Microsoft version of Google Apps Script?"
 - "I can't find my files in Teams"

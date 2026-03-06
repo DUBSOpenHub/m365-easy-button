@@ -1,12 +1,26 @@
+---
+name: m365-easy-button
+description: Translate Google Workspace habits into Microsoft 365 steps, app mappings, troubleshooting, and power-user guidance.
+license: MIT
+---
+
 # M365 Easy Button — Your Google-to-Microsoft Translator
 
 ## Fast Start
 
-Install in one command:
+Install with Copilot CLI:
 
-    mkdir -p ~/.copilot/skills/m365-easy-button && pbpaste > ~/.copilot/skills/m365-easy-button/SKILL.md
+    copilot plugin install DUBSOpenHub/m365-easy-button
 
-Copy this entire file to your clipboard, then run the command above. Restart your Copilot CLI session. Done. Ask any Microsoft 365 question.
+If you're already inside Copilot CLI, run:
+
+    /plugin install DUBSOpenHub/m365-easy-button
+
+Manual fallback:
+
+    mkdir -p ~/.copilot/skills/m365-easy-button && curl -fsSL https://raw.githubusercontent.com/DUBSOpenHub/m365-easy-button/main/skills/m365-easy-button/SKILL.md -o ~/.copilot/skills/m365-easy-button/SKILL.md
+
+Restart Copilot CLI after installing, then ask any Microsoft 365 question.
 
 ---
 
@@ -860,7 +874,7 @@ If the skill is not installed, respond with:
    Well, it will be. Let's get you set up.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 🟢
 ```
-Then show: `/skills add DUBSOpenHub/m365-easy-button` and tell them to restart and say it again.
+Then show: `/plugin install DUBSOpenHub/m365-easy-button` and tell them to restart and say it again.
 
 ## CLI Engagement — Fun Touches
 

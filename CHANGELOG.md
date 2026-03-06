@@ -2,6 +2,17 @@
 
 All notable changes to M365 Easy Button will be documented in this file.
 
+## [1.1.0] - 2026-03-06
+
+### Added
+- Root `plugin.json` manifest so the repository can be installed with the standard Copilot CLI plugin flow
+- `skills/m365-easy-button/SKILL.md` plugin layout with required skill frontmatter
+
+### Changed
+- Replaced the incorrect `/skills add` install guidance with `copilot plugin install` / `/plugin install`
+- Moved the canonical skill file into plugin layout and updated docs, contributor guidance, and CI validation to match
+- Added testing guidance for personal-skill precedence so plugin verification does not produce false positives
+
 ## [1.0.0] - 2026-03-05
 
 ### Added

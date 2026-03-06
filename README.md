@@ -4,7 +4,7 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 [![Security Policy](https://img.shields.io/badge/Security-Policy-brightgreen?logo=github)](SECURITY.md)
-![Version: v1.0.0](https://img.shields.io/badge/version-v1.0.0-5E5E5E.svg)
+![Version: v1.1.0](https://img.shields.io/badge/version-v1.1.0-5E5E5E.svg)
 ![Platform: Copilot CLI](https://img.shields.io/badge/platform-Copilot%20CLI-232F3E.svg)
 ![Language: Markdown](https://img.shields.io/badge/written%20in-Markdown-000000.svg)
 
@@ -12,9 +12,11 @@ A Copilot CLI skill that translates Google Workspace muscle memory into Microsof
 
 We know this transition can be tough. This GitHub Copilot skill is going to make it easy! Every time you have a question, come back and we'll help you navigate it.
 
-> ⚡ **Get started fast!** Copy this right into the [Copilot CLI](https://github.com/github/copilot-cli):
+> ⚡ **Get started fast!** Install it with either the shell command or the in-CLI command:
 > ```
-> /skills add DUBSOpenHub/m365-easy-button
+> copilot plugin install DUBSOpenHub/m365-easy-button
+> # or inside Copilot CLI:
+> /plugin install DUBSOpenHub/m365-easy-button
 > ```
 > Then say **`easy button`** and you're in.
 
