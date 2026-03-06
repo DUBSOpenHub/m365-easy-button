@@ -10,6 +10,8 @@
 
 A Copilot CLI skill that translates Google Workspace muscle memory into Microsoft 365 fluency. Not generic tech support — a **translator** between two productivity ecosystems.
 
+![M365 Easy Button Coverage Map](skills/m365-easy-button/coverage-chart.png)
+
 We know this transition can be tough. This GitHub Copilot skill is going to make it easy! Every time you have a question, come back and we'll help you navigate it.
 
 > ⚡ **Get started fast!** Install it with either the shell command or the in-CLI command:
@@ -84,7 +86,7 @@ Every answer follows this flow:
 | Google Admin | → | M365 Admin Center |
 | ...and 20+ more | | |
 
-### 📦 What's Inside (860+ lines)
+### 📦 What's Inside (1,150+ lines)
 
 | Section | What you get |
 |---|---|
@@ -92,10 +94,15 @@ Every answer follows this flow:
 | 🧠 Mental Models | Why Microsoft *feels* different — not just what's different |
 | 🔄 Behavior Mappings | Feature-by-feature tables for 9 product areas |
 | ⌨️ Keyboard Shortcuts | Side-by-side: Gmail↔Outlook, Meet↔Teams, Docs↔Word, Sheets↔Excel |
+| 📱 Mobile M365 | Outlook, Teams, OneDrive, and Office apps on phone & tablet |
 | 🔧 9 Workflows | Task-by-task: standup, doc review, external sharing, onboarding... |
 | 📅 First Week Guide | 10 things to set up on day one |
 | 💪 Power User Tips | Quick Steps, Search Folders, Power Automate, Loop components |
 | 🤖 AI Comparison | Google Workspace AI vs M365 Copilot — features, licensing, getting started |
+| 🏗️ SharePoint Sites | Google Sites mapping, building blocks, intranet quick-start |
+| 🔐 Security & Compliance | Purview, Defender, DLP, Sensitivity Labels, encryption |
+| ⚙️ Power Apps | AppSheet mapping, when-to-use matrix, quick-start |
+| 💳 Licensing & Plans | Plan comparison (Basic → E5), add-ons, how to check your license |
 | 🔍 13 Troubleshooting | Real-world "it's not working" patterns with step-by-step fixes |
 
 ## The Experience
