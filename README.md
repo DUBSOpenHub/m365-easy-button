@@ -1,12 +1,25 @@
 # 🟢 M365 Easy Button
 
-> ⚡ **Get started fast!** Install it with either the shell command or the in-CLI command:
+> ### ⚡ One Command. That's It.
+>
+> **Never used the CLI before? No problem.** Follow these 3 steps:
+>
+> **1. Open your terminal**
+> - 🍎 **Mac:** Press `⌘ + Space`, type **Terminal**, hit Enter
+> - 🪟 **Windows:** Press `Win + X`, choose **Terminal** or **PowerShell**
+> - 🐧 **Linux:** Press `Ctrl + Alt + T`
+>
+> **2. Paste this line and press Enter:**
+> ```bash
+> curl -fsSL https://raw.githubusercontent.com/DUBSOpenHub/m365-easy-button/main/quickstart.sh | bash
 > ```
-> copilot plugin install DUBSOpenHub/m365-easy-button
-> # or inside Copilot CLI:
-> /plugin install DUBSOpenHub/m365-easy-button
-> ```
-> Then say **`easy button`** and you're in.
+> That's the whole install. It downloads the CLI, adds the skill, and launches everything for you.
+>
+> **3. When Copilot opens, type:** `easy button`
+>
+> That's it — your Google → Microsoft translator is ready! 🟢
+>
+> *Requires an active [Copilot subscription](https://github.com/features/copilot/plans). [Get one here →](https://github.com/features/copilot/plans)*
 
 > **That was easy!** — Google Workspace → Microsoft 365. Your translator is ready.
 
